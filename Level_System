@@ -1,6 +1,31 @@
 // We have Levels 1 - 10 and an Master Level!
 // %level% means that that command is repeatet for each level!
 // INIT means that the following command runes just ones
+// Commands between /* and */ are in one command row
 
 INIT: /scoreboard players add leave stat.LeaveGame
-INIT: /scoreboard players add Level stat.
+INIT: /scoreboard players add Level level
+
+/*
+/scoreboard players tag @e[score_Level_min=0] add 1
+/scoreboard players tag @e[score_Level_min=10] add 2
+/scoreboard players tag @e[score_Level_min=15] add 3
+/scoreboard players tag @e[score_Level_min=20] add 4
+/scoreboard players tag @e[score_Level_min=30] add 5
+/scoreboard players tag @e[score_Level_min=50] add 6
+/scoreboard players tag @e[score_Level_min=70] add 7
+/scoreboard players tag @e[score_Level_min=80] add 8
+/scoreboard players tag @e[score_Level_min=90] add 9
+/scoreboard players tag @e[score_Level_min=100] add 10
+/scoreboard players tag @e[score_Level_min=110] add Master
+*/
+
+/*
+/title @a[score_leave_min=1] times 20 40 20
+/title @a[tag=%level%,score_leave_min=1] subtitle {"text":"Class %level%","color":"aqua"}
+/title @a[tag=Master,score_leave_min=1] subtitle {"text":"Class Master","color":"dark_red"}
+
+/title @a[score_leave_min=1] title {"text":"Welcome Back","color":"green"}
+/execute @a[tag=Master,score_leave_min=1] ~ ~ ~ /execute @r ~ ~ ~ /say Master @p Joined the Game!
+/scoreboard players reset @a[score_leave_min=1] leave
+*/
