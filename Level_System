@@ -1,1 +1,6 @@
+// We have Levels 1 - 10 and an Master Level!
+// %level% means that that command is repeatet for each level!
+// INIT means that the following command runes just ones
 
+INIT: /scoreboard players add leave stat.LeaveGame
+INIT: /scoreboard players add Level stat.
